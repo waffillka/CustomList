@@ -1,12 +1,15 @@
 #pragma once
+#include <iostream>
+#include <memory>
+
 template<typename T>
 class Node
 {
 public:
 	T info;
-	Node *_next;
+	std::shared_ptr<Node<T>> _next;
 
-	Node(T info, Node* next)
+	Node(T info, std::shared_ptr<Node<T>> next)
 	{
 		this->info = info;
 		this->_next = next;
@@ -14,7 +17,7 @@ public:
 
 	Node()
 	{
-		T info = default(T); //
+		T info = default(T);
 		this->_next = nullptr;
 	}
 };
