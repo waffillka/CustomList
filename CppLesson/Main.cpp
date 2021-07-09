@@ -25,9 +25,9 @@ int main()
 
 
     auto ssin = new Sin();
-    std::cout << ssin->GetSinWithEpsilon(0.56, 0.0000001) << std::endl;
+    std::cout << ssin->GetSinWithEpsilon(0.56, 0.0000000001) << std::endl;
     std::cout << sin(0.56) << std::endl;
-    std::cout << ssin->GetSinWithEpsilonV2(0.56) << std::endl;
+    std::cout << ssin->GetSinWithEpsilonV2(0.56, 0.0000001) << std::endl;
 
 }
 
