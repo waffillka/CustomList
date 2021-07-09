@@ -8,6 +8,10 @@ class Node
 public:
 	T info;
 	std::shared_ptr<Node<T>> _next;
+	~Node()
+	{
+		std::cout << "~Node" << std::endl;
+	}
 
 	Node(T info, std::shared_ptr<Node<T>> next)
 	{
